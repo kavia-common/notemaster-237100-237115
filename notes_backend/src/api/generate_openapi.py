@@ -1,3 +1,8 @@
+"""
+Script to generate the OpenAPI JSON specification from the FastAPI app.
+Run from the notes_backend directory: python -m src.api.generate_openapi
+"""
+
 import json
 import os
 
@@ -13,3 +18,5 @@ output_path = os.path.join(output_dir, "openapi.json")
 
 with open(output_path, "w") as f:
     json.dump(openapi_schema, f, indent=2)
+
+print(f"OpenAPI schema written to {output_path}")
